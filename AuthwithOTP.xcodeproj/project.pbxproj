@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0246032829B4F55800FBD9B4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032729B4F55800FBD9B4 /* Login.swift */; };
+		0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032929B53B6800FBD9B4 /* LoginViewModel.swift */; };
+		0246032D29B543D600FBD9B4 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032C29B543D600FBD9B4 /* Countries.swift */; };
 		0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C39229B3C4DE002B83F7 /* AuthwithOTPApp.swift */; };
 		0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C39429B3C4DE002B83F7 /* ContentView.swift */; };
 		0260C39729B3C4DF002B83F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0260C39629B3C4DF002B83F7 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0246032729B4F55800FBD9B4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0246032929B53B6800FBD9B4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0246032C29B543D600FBD9B4 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		0260C38F29B3C4DE002B83F7 /* AuthwithOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthwithOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260C39229B3C4DE002B83F7 /* AuthwithOTPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPApp.swift; sourceTree = "<group>"; };
 		0260C39429B3C4DE002B83F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +77,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0246032529B4F51B00FBD9B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0246032729B4F55800FBD9B4 /* Login.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0246032629B4F52800FBD9B4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0246032929B53B6800FBD9B4 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0246032B29B543B900FBD9B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0246032C29B543D600FBD9B4 /* Countries.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0260C38629B3C4DE002B83F7 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +124,9 @@
 		0260C39129B3C4DE002B83F7 /* AuthwithOTP */ = {
 			isa = PBXGroup;
 			children = (
+				0246032B29B543B900FBD9B4 /* Model */,
+				0246032629B4F52800FBD9B4 /* ViewModels */,
+				0246032529B4F51B00FBD9B4 /* Views */,
 				0260C39229B3C4DE002B83F7 /* AuthwithOTPApp.swift */,
 				0260C39429B3C4DE002B83F7 /* ContentView.swift */,
 				0260C39629B3C4DF002B83F7 /* Assets.xcassets */,
@@ -257,7 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
+				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
 				0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */,
+				0246032D29B543D600FBD9B4 /* Countries.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

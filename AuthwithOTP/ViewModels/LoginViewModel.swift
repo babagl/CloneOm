@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var phNo = ""
+    @Published var code = ""
     
     //getting Country phone Code...
     
     func getCountryCode() -> String {
         let regionCode = Locale.current.regionCode ?? ""
-        return ""
+        print("mon code est")
+        print(regionCode)
+        print(countries[regionCode] ?? "")
+        return countries[regionCode] ?? ""
     }
 }

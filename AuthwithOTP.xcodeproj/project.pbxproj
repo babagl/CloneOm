@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B629B5EFD200A2DB11 /* Verification.swift */; };
+		023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */; };
 		0246032829B4F55800FBD9B4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032729B4F55800FBD9B4 /* Login.swift */; };
 		0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032929B53B6800FBD9B4 /* LoginViewModel.swift */; };
 		0246032D29B543D600FBD9B4 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032C29B543D600FBD9B4 /* Countries.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023A95B629B5EFD200A2DB11 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		0246032729B4F55800FBD9B4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0246032929B53B6800FBD9B4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0246032C29B543D600FBD9B4 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				0246032729B4F55800FBD9B4 /* Login.swift */,
+				023A95B629B5EFD200A2DB11 /* Verification.swift */,
+				023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,11 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
 				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
 				0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */,
 				0246032D29B543D600FBD9B4 /* Countries.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
+				023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AuthwithOTP/Preview Content\"";
+				DEVELOPMENT_TEAM = A5L3S3UN63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,6 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AuthwithOTP/Preview Content\"";
+				DEVELOPMENT_TEAM = A5L3S3UN63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

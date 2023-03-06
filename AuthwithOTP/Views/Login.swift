@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Login: View {
     @StateObject var loginData = LoginViewModel()
+    @State var isSmall = UIScreen.main.bounds.height < 750
     
     var body: some View {
         VStack{
@@ -24,8 +25,8 @@ struct Login: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
-                Text("vous recevrez un code à 4 chiffres \npour vérifier la prochaine étape")
-                    .font(.title2)
+                Text("vous recevrez un code à 6 chiffres \npour vérifier la prochaine étape")
+                    .font(isSmall ? .none : .title2)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding()
@@ -37,22 +38,22 @@ struct Login: View {
                         Text("Entrer votre numero")
                             .font(.title3)
                         .foregroundColor(.gray)
-                        Text(loginData.phNo)
+                        Text("+\(loginData.getCountryCode())  \(loginData.phNo)")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                     }
                     Spacer(minLength: 0)
                     
-                    Button(action: {
-                    }){
+                    NavigationLink(destination: Verification(loginData: loginData)){
                         Text("Continue")
                             .foregroundColor(.black)
                             .padding(.vertical, 18)
                             .padding(.horizontal, 38)
-                            .background(.orange)
+                            .background(Color("OrangeM"))
                             .cornerRadius(15)
                     }
+                    .disabled(loginData.phNo == "" ? true: false)
                     
                 }
                 .padding()
@@ -63,11 +64,40 @@ struct Login: View {
             }
             .frame(height: UIScreen.main.bounds.height / 1.8)
             .background(.white)
-            Spacer()
+            
+            //Costum number Pad
+            CustomNumberPad(value: $loginData.phNo, isVerify: false)
         }
         .background(Color("Bg").ignoresSafeArea(.all, edges: .bottom))
     }
+    
+    func buttonAction(value: String) {
+        if value == "delete.left" && loginData.phNo != "" {
+            loginData.phNo.removeLast()
+        }
+        
+        if value != "delete.left"{
+            loginData.phNo.append(value)
+        }
+    }
 }
+
+//getting height and width for dynamic sizing
+func getWidth(frame: CGRect) -> CGFloat{
+    let width = frame.width
+    let actualWidth = width - 40
+    return actualWidth / 3
+}
+
+func getHeight(frame : CGRect) -> CGFloat{
+    let height = frame.height
+    let actualHeight = height - 30
+    return actualHeight / 4
+}
+
+
+
+
 
 struct Login_Previews: PreviewProvider {
     static var previews: some View {

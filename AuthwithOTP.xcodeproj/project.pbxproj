@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */; };
+		022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF629B7478C003BBF88 /* TabCurveView.swift */; };
+		022B3EFF29B785F2003BBF88 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF929B785F2003BBF88 /* CardListView.swift */; };
+		022B3F0029B785F2003BBF88 /* TransactionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */; };
+		022B3F0129B785F2003BBF88 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */; };
+		022B3F0229B785F2003BBF88 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFC29B785F2003BBF88 /* HomeScreen.swift */; };
+		022B3F0329B785F2003BBF88 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFD29B785F2003BBF88 /* TransactionView.swift */; };
+		022B3F0429B785F2003BBF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFE29B785F2003BBF88 /* CardView.swift */; };
 		023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B629B5EFD200A2DB11 /* Verification.swift */; };
 		023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */; };
 		023A95BB29B6249E00A2DB11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */; };
@@ -46,6 +54,14 @@
 
 /* Begin PBXFileReference section */
 		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
+		022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBAr.swift; sourceTree = "<group>"; };
+		022B3EF629B7478C003BBF88 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
+		022B3EF929B785F2003BBF88 /* CardListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHeader.swift; sourceTree = "<group>"; };
+		022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		022B3EFC29B785F2003BBF88 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		022B3EFD29B785F2003BBF88 /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		022B3EFE29B785F2003BBF88 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		023A95B629B5EFD200A2DB11 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,9 +119,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022B3EF329B734BD003BBF88 /* TabBAr */ = {
+			isa = PBXGroup;
+			children = (
+				022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */,
+				022B3EF629B7478C003BBF88 /* TabCurveView.swift */,
+			);
+			path = TabBAr;
+			sourceTree = "<group>";
+		};
+		022B3EF829B78504003BBF88 /* CustomHomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				022B3EF929B785F2003BBF88 /* CardListView.swift */,
+				022B3EFE29B785F2003BBF88 /* CardView.swift */,
+				022B3EFC29B785F2003BBF88 /* HomeScreen.swift */,
+				022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */,
+				022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */,
+				022B3EFD29B785F2003BBF88 /* TransactionView.swift */,
+			);
+			path = CustomHomeViews;
+			sourceTree = "<group>";
+		};
+		022B3F0529B7885D003BBF88 /* TextFieldsViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextFieldsViews;
+			sourceTree = "<group>";
+		};
 		0246032529B4F51B00FBD9B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				022B3F0529B7885D003BBF88 /* TextFieldsViews */,
+				022B3EF829B78504003BBF88 /* CustomHomeViews */,
+				022B3EF329B734BD003BBF88 /* TabBAr */,
 				0246032729B4F55800FBD9B4 /* Login.swift */,
 				023A95B629B5EFD200A2DB11 /* Verification.swift */,
 				023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */,
@@ -456,14 +504,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022B3F0029B785F2003BBF88 /* TransactionHeader.swift in Sources */,
+				022B3F0329B785F2003BBF88 /* TransactionView.swift in Sources */,
 				023A95C029B693E700A2DB11 /* HomeView.swift in Sources */,
 				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
+				022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
 				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
 				0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */,
 				0246032D29B543D600FBD9B4 /* Countries.swift in Sources */,
 				023A95BE29B6360E00A2DB11 /* AlertView.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
+				022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */,
+				022B3F0229B785F2003BBF88 /* HomeScreen.swift in Sources */,
+				022B3EFF29B785F2003BBF88 /* CardListView.swift in Sources */,
+				022B3F0129B785F2003BBF88 /* TransactionRowView.swift in Sources */,
+				022B3F0429B785F2003BBF88 /* CardView.swift in Sources */,
 				023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

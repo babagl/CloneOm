@@ -10,22 +10,42 @@ import Firebase
 
 struct HomeView: View {
     @AppStorage("log_Status") var status = false
+    @State var seletedTab = "house"
     var body: some View {
-        VStack {
-            Text("Logged In Successfully")
-                .font(.title)
-                .fontWeight(.heavy)
-                .foregroundColor(.black)
-        
-        Button(action:{
-            //login out
-            try? Auth.auth().signOut()
-            status.toggle()
-        }, label: {
-            Text("Logout")
-                .fontWeight(.heavy)
+        ZStack(alignment: .bottom, content: {
+//            VStack {
+//
+//
+//
+//
+//            }
+            HomeScreen()
+            CustomTabBAr(selectedTab: $seletedTab)
+            
+   
+            
+            
         })
-        }
+        
+        
+//        Button(action:{
+//            //login out
+//            try? Auth.auth().signOut()
+//            status.toggle()
+//        }, label: {
+//            Text("Logout")
+//                .fontWeight(.heavy)
+//        })
+
+    }
+}
+
+struct home : View {
+    var body: some View{
+        Text("BABA GALLE")
+//        Color("Bg")
+//            .ignoresSafeArea(.all)
+        
     }
 }
 

@@ -11,76 +11,83 @@ struct Verification: View {
     @ObservedObject var loginData : LoginViewModel
     @Environment(\.presentationMode) var present
     var body: some View {
-        VStack {
-            
-            
-            VStack{
+        ZStack{
+            VStack {
                 
                 
-                HStack{
-                    Button(action: {present.wrappedValue.dismiss()}){
-                        Image(systemName: "arrow.left")
+                VStack{
+                    
+                    
+                    HStack{
+                        Button(action: {present.wrappedValue.dismiss()}){
+                            Image(systemName: "arrow.left")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                        }
+                        Spacer()
+                        Text("Vérifier le numéro")
                             .font(.title2)
+                            .fontWeight(.bold)
                             .foregroundColor(.black)
+                        Spacer()
+                        if loginData.loading{ProgressView()}
                     }
-                    Spacer()
-                    Text("Vérifier le numéro")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                    Spacer()
-                }
-                .padding()
-                Text("code envoyé sur \(loginData.phNo)")
-                    .foregroundColor(.gray)
-                    .padding(.bottom)
-                
-                Spacer(minLength: 0)
-                HStack(spacing: 15) {
-                    ForEach(0..<6, id:\.self){index in
-                        //displaying code...
-                        CodeView(code: getCodeAtIndex(index: index))
-                    }
-                }
-                .padding()
-                .padding(.horizontal, 20)
-                Spacer(minLength: 0)
-                
-                HStack(spacing: 6){
-                    Text("Vous n'avez pas reçu de code?")
+                    .padding()
+                    Text("code envoyé sur \(loginData.phNo)")
                         .foregroundColor(.gray)
+                        .padding(.bottom)
+                    
+                    Spacer(minLength: 0)
+                    HStack(spacing: 15) {
+                        ForEach(0..<6, id:\.self){index in
+                            //displaying code...
+                            CodeView(code: getCodeAtIndex(index: index))
+                        }
+                    }
+                    .padding()
+                    .padding(.horizontal, 20)
+                    Spacer(minLength: 0)
+                    
+                    HStack(spacing: 6){
+                        Text("Vous n'avez pas reçu de code?")
+                            .foregroundColor(.gray)
+                        
+                        Button(action:{loginData.requestCode()}){
+                            Text("Renvoyer")
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                        }
+                    }
                     
                     Button(action:{}){
-                        Text("Renvoyer")
+                        Text("Obtenir par appel")
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                     }
+                    .padding(.top, 6)
+                    Button(action: loginData.verifyCode){
+                        Text("Verifier et creer un compte ")
+                            .foregroundColor(.black)
+                            .padding(.vertical)
+                            .frame(width: UIScreen.main.bounds.width - 30)
+                            .background(Color("OrangeM"))
+                            .cornerRadius(15)
+                    }
+                    .padding()
                 }
+                .frame(height: UIScreen.main.bounds.height / 1.8)
+                .background(Color.white)
+                .cornerRadius(20)
                 
-                Button(action:{}){
-                    Text("Obtenir par appel")
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                }
-                .padding(.top, 6)
-                Button(action: { }){
-                    Text("Verifier et creer un compte ")
-                        .foregroundColor(.black)
-                        .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 30)
-                        .background(Color("OrangeM"))
-                        .cornerRadius(15)
-                }
-                .padding()
-            }
-            .frame(height: UIScreen.main.bounds.height / 1.8)
-            .background(Color.white)
-            .cornerRadius(20)
-            
-            CustomNumberPad(value: $loginData.code, isVerify: true)
+                CustomNumberPad(value: $loginData.code, isVerify: true)
 
+            }
+            .background(Color("Bg").ignoresSafeArea(.all , edges: .bottom))
+            
+            if loginData.error{
+                AlertView(msg: loginData.errorMessage, show: $loginData.error)
+            }
         }
-        .background(Color("Bg").ignoresSafeArea(.all , edges: .bottom))
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
     }

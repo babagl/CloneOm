@@ -1,0 +1,6 @@
+framework module Pods_AuthwithOTP {
+  umbrella header "Pods-AuthwithOTP-umbrella.h"
+
+  export *
+  module * { export * }
+}

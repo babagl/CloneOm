@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B629B5EFD200A2DB11 /* Verification.swift */; };
 		023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */; };
+		023A95BB29B6249E00A2DB11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */; };
+		023A95BE29B6360E00A2DB11 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95BD29B6360D00A2DB11 /* AlertView.swift */; };
+		023A95C029B693E700A2DB11 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95BF29B693E700A2DB11 /* HomeView.swift */; };
 		0246032829B4F55800FBD9B4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032729B4F55800FBD9B4 /* Login.swift */; };
 		0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032929B53B6800FBD9B4 /* LoginViewModel.swift */; };
 		0246032D29B543D600FBD9B4 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032C29B543D600FBD9B4 /* Countries.swift */; };
@@ -19,6 +22,9 @@
 		0260C3A429B3C4DF002B83F7 /* AuthwithOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3A329B3C4DF002B83F7 /* AuthwithOTPTests.swift */; };
 		0260C3AE29B3C4DF002B83F7 /* AuthwithOTPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3AD29B3C4DF002B83F7 /* AuthwithOTPUITests.swift */; };
 		0260C3B029B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3AF29B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift */; };
+		18FC098ABFF33996586E4FF6 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20165022E37D207773F2BC52 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework */; };
+		8C38C3528629DC8BC431D396 /* Pods_AuthwithOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA21A2735ED50D7C269FAECF /* Pods_AuthwithOTP.framework */; };
+		E170DC518E2582B8BADD6EF8 /* Pods_AuthwithOTPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0280AA525F8F84091AAD9693 /* Pods_AuthwithOTPTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
 		023A95B629B5EFD200A2DB11 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
+		023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		023A95BC29B624C900A2DB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		023A95BD29B6360D00A2DB11 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		023A95BF29B693E700A2DB11 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0246032729B4F55800FBD9B4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0246032929B53B6800FBD9B4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0246032C29B543D600FBD9B4 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
@@ -54,6 +65,14 @@
 		0260C3A929B3C4DF002B83F7 /* AuthwithOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthwithOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260C3AD29B3C4DF002B83F7 /* AuthwithOTPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPUITests.swift; sourceTree = "<group>"; };
 		0260C3AF29B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0280AA525F8F84091AAD9693 /* Pods_AuthwithOTPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthwithOTPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD04F842CDCD23AA4545ABE /* Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		20165022E37D207773F2BC52 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthwithOTP_AuthwithOTPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40E2169F3AAB860D44E54EAA /* Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA21A2735ED50D7C269FAECF /* Pods_AuthwithOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthwithOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00DFE6814A8CF323A1A62D1 /* Pods-AuthwithOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP/Pods-AuthwithOTP.release.xcconfig"; sourceTree = "<group>"; };
+		F8DB530E12C0D6B1BB45BC53 /* Pods-AuthwithOTPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.debug.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF961F11B23A2CFEC4F86986 /* Pods-AuthwithOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP.debug.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP/Pods-AuthwithOTP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C38C3528629DC8BC431D396 /* Pods_AuthwithOTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E170DC518E2582B8BADD6EF8 /* Pods_AuthwithOTPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FC098ABFF33996586E4FF6 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +109,8 @@
 				0246032729B4F55800FBD9B4 /* Login.swift */,
 				023A95B629B5EFD200A2DB11 /* Verification.swift */,
 				023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */,
+				023A95BD29B6360D00A2DB11 /* AlertView.swift */,
+				023A95BF29B693E700A2DB11 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +138,8 @@
 				0260C3A229B3C4DF002B83F7 /* AuthwithOTPTests */,
 				0260C3AC29B3C4DF002B83F7 /* AuthwithOTPUITests */,
 				0260C39029B3C4DE002B83F7 /* Products */,
+				A8A89C29A3D1F99876B15A3F /* Pods */,
+				4D3902A042E9476E7283A882 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +156,8 @@
 		0260C39129B3C4DE002B83F7 /* AuthwithOTP */ = {
 			isa = PBXGroup;
 			children = (
+				023A95BC29B624C900A2DB11 /* Info.plist */,
+				023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */,
 				0246032B29B543B900FBD9B4 /* Model */,
 				0246032629B4F52800FBD9B4 /* ViewModels */,
 				0246032529B4F51B00FBD9B4 /* Views */,
@@ -166,6 +194,29 @@
 			path = AuthwithOTPUITests;
 			sourceTree = "<group>";
 		};
+		4D3902A042E9476E7283A882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA21A2735ED50D7C269FAECF /* Pods_AuthwithOTP.framework */,
+				20165022E37D207773F2BC52 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework */,
+				0280AA525F8F84091AAD9693 /* Pods_AuthwithOTPTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8A89C29A3D1F99876B15A3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF961F11B23A2CFEC4F86986 /* Pods-AuthwithOTP.debug.xcconfig */,
+				B00DFE6814A8CF323A1A62D1 /* Pods-AuthwithOTP.release.xcconfig */,
+				40E2169F3AAB860D44E54EAA /* Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig */,
+				1BD04F842CDCD23AA4545ABE /* Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig */,
+				F8DB530E12C0D6B1BB45BC53 /* Pods-AuthwithOTPTests.debug.xcconfig */,
+				0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0260C3B329B3C4DF002B83F7 /* Build configuration list for PBXNativeTarget "AuthwithOTP" */;
 			buildPhases = (
+				138F97A2018D2F2FF4A8B8D5 /* [CP] Check Pods Manifest.lock */,
 				0260C38B29B3C4DE002B83F7 /* Sources */,
 				0260C38C29B3C4DE002B83F7 /* Frameworks */,
 				0260C38D29B3C4DE002B83F7 /* Resources */,
+				92182B877679052685D289B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0260C3B629B3C4DF002B83F7 /* Build configuration list for PBXNativeTarget "AuthwithOTPTests" */;
 			buildPhases = (
+				83711075F2044A6C8B0420A6 /* [CP] Check Pods Manifest.lock */,
 				0260C39B29B3C4DF002B83F7 /* Sources */,
 				0260C39C29B3C4DF002B83F7 /* Frameworks */,
 				0260C39D29B3C4DF002B83F7 /* Resources */,
@@ -208,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0260C3B929B3C4DF002B83F7 /* Build configuration list for PBXNativeTarget "AuthwithOTPUITests" */;
 			buildPhases = (
+				FE7AC648B6181E761797D5C7 /* [CP] Check Pods Manifest.lock */,
 				0260C3A529B3C4DF002B83F7 /* Sources */,
 				0260C3A629B3C4DF002B83F7 /* Frameworks */,
 				0260C3A729B3C4DF002B83F7 /* Resources */,
+				C73499E6CFB9E456E27666DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0260C39A29B3C4DF002B83F7 /* Preview Assets.xcassets in Resources */,
+				023A95BB29B6249E00A2DB11 /* GoogleService-Info.plist in Resources */,
 				0260C39729B3C4DF002B83F7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,16 +348,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		138F97A2018D2F2FF4A8B8D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthwithOTP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83711075F2044A6C8B0420A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthwithOTPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92182B877679052685D289B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP/Pods-AuthwithOTP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP/Pods-AuthwithOTP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP/Pods-AuthwithOTP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C73499E6CFB9E456E27666DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE7AC648B6181E761797D5C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AuthwithOTP-AuthwithOTPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0260C38B29B3C4DE002B83F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023A95C029B693E700A2DB11 /* HomeView.swift in Sources */,
 				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
 				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
 				0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */,
 				0246032D29B543D600FBD9B4 /* Countries.swift in Sources */,
+				023A95BE29B6360E00A2DB11 /* AlertView.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
 				023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */,
 			);
@@ -455,6 +617,7 @@
 		};
 		0260C3B429B3C4DF002B83F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF961F11B23A2CFEC4F86986 /* Pods-AuthwithOTP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +627,7 @@
 				DEVELOPMENT_TEAM = A5L3S3UN63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthwithOTP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,6 +648,7 @@
 		};
 		0260C3B529B3C4DF002B83F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B00DFE6814A8CF323A1A62D1 /* Pods-AuthwithOTP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +658,7 @@
 				DEVELOPMENT_TEAM = A5L3S3UN63;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AuthwithOTP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +679,7 @@
 		};
 		0260C3B729B3C4DF002B83F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8DB530E12C0D6B1BB45BC53 /* Pods-AuthwithOTPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +699,7 @@
 		};
 		0260C3B829B3C4DF002B83F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +719,7 @@
 		};
 		0260C3BA29B3C4DF002B83F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E2169F3AAB860D44E54EAA /* Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +737,7 @@
 		};
 		0260C3BB29B3C4DF002B83F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD04F842CDCD23AA4545ABE /* Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

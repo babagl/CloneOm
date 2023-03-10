@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */; };
 		022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF629B7478C003BBF88 /* TabCurveView.swift */; };
-		022B3EFF29B785F2003BBF88 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF929B785F2003BBF88 /* CardListView.swift */; };
-		022B3F0029B785F2003BBF88 /* TransactionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */; };
-		022B3F0129B785F2003BBF88 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */; };
-		022B3F0229B785F2003BBF88 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFC29B785F2003BBF88 /* HomeScreen.swift */; };
-		022B3F0329B785F2003BBF88 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFD29B785F2003BBF88 /* TransactionView.swift */; };
-		022B3F0429B785F2003BBF88 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EFE29B785F2003BBF88 /* CardView.swift */; };
 		023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B629B5EFD200A2DB11 /* Verification.swift */; };
 		023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */; };
 		023A95BB29B6249E00A2DB11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */; };
@@ -23,6 +17,7 @@
 		0246032829B4F55800FBD9B4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032729B4F55800FBD9B4 /* Login.swift */; };
 		0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032929B53B6800FBD9B4 /* LoginViewModel.swift */; };
 		0246032D29B543D600FBD9B4 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246032C29B543D600FBD9B4 /* Countries.swift */; };
+		024A06DB29BB374A00CD9708 /* OtpVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024A06DA29BB374A00CD9708 /* OtpVerificationView.swift */; };
 		0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C39229B3C4DE002B83F7 /* AuthwithOTPApp.swift */; };
 		0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C39429B3C4DE002B83F7 /* ContentView.swift */; };
 		0260C39729B3C4DF002B83F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0260C39629B3C4DF002B83F7 /* Assets.xcassets */; };
@@ -30,6 +25,12 @@
 		0260C3A429B3C4DF002B83F7 /* AuthwithOTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3A329B3C4DF002B83F7 /* AuthwithOTPTests.swift */; };
 		0260C3AE29B3C4DF002B83F7 /* AuthwithOTPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3AD29B3C4DF002B83F7 /* AuthwithOTPUITests.swift */; };
 		0260C3B029B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260C3AF29B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift */; };
+		027740A529B8EA3000DCA837 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027740A429B8EA3000DCA837 /* WalletView.swift */; };
+		027740AA29B9E5F800DCA837 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027740A929B9E5F800DCA837 /* Home.swift */; };
+		027740AE29B9E62200DCA837 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027740AB29B9E62200DCA837 /* MainView.swift */; };
+		027740AF29B9E62200DCA837 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027740AC29B9E62200DCA837 /* SideMenu.swift */; };
+		027740B029B9E62200DCA837 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027740AD29B9E62200DCA837 /* CustomTabView.swift */; };
+		02DEB0F429BB10C300F995B1 /* TextFieldNumeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DEB0F329BB10C300F995B1 /* TextFieldNumeroView.swift */; };
 		18FC098ABFF33996586E4FF6 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20165022E37D207773F2BC52 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework */; };
 		8C38C3528629DC8BC431D396 /* Pods_AuthwithOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA21A2735ED50D7C269FAECF /* Pods_AuthwithOTP.framework */; };
 		E170DC518E2582B8BADD6EF8 /* Pods_AuthwithOTPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0280AA525F8F84091AAD9693 /* Pods_AuthwithOTPTests.framework */; };
@@ -56,12 +57,6 @@
 		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
 		022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBAr.swift; sourceTree = "<group>"; };
 		022B3EF629B7478C003BBF88 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
-		022B3EF929B785F2003BBF88 /* CardListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
-		022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionHeader.swift; sourceTree = "<group>"; };
-		022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
-		022B3EFC29B785F2003BBF88 /* HomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		022B3EFD29B785F2003BBF88 /* TransactionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
-		022B3EFE29B785F2003BBF88 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		023A95B629B5EFD200A2DB11 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		023A95B829B610BB00A2DB11 /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -71,6 +66,7 @@
 		0246032729B4F55800FBD9B4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0246032929B53B6800FBD9B4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0246032C29B543D600FBD9B4 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		024A06DA29BB374A00CD9708 /* OtpVerificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtpVerificationView.swift; sourceTree = "<group>"; };
 		0260C38F29B3C4DE002B83F7 /* AuthwithOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthwithOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260C39229B3C4DE002B83F7 /* AuthwithOTPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPApp.swift; sourceTree = "<group>"; };
 		0260C39429B3C4DE002B83F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +77,13 @@
 		0260C3A929B3C4DF002B83F7 /* AuthwithOTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthwithOTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260C3AD29B3C4DF002B83F7 /* AuthwithOTPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPUITests.swift; sourceTree = "<group>"; };
 		0260C3AF29B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwithOTPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		027740A429B8EA3000DCA837 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		027740A929B9E5F800DCA837 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		027740AB29B9E62200DCA837 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		027740AC29B9E62200DCA837 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		027740AD29B9E62200DCA837 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		0280AA525F8F84091AAD9693 /* Pods_AuthwithOTPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthwithOTPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02DEB0F329BB10C300F995B1 /* TextFieldNumeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNumeroView.swift; sourceTree = "<group>"; };
 		1BD04F842CDCD23AA4545ABE /* Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		20165022E37D207773F2BC52 /* Pods_AuthwithOTP_AuthwithOTPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthwithOTP_AuthwithOTPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E2169F3AAB860D44E54EAA /* Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig"; path = "Target Support Files/Pods-AuthwithOTP-AuthwithOTPUITests/Pods-AuthwithOTP-AuthwithOTPUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,22 +130,10 @@
 			path = TabBAr;
 			sourceTree = "<group>";
 		};
-		022B3EF829B78504003BBF88 /* CustomHomeViews */ = {
-			isa = PBXGroup;
-			children = (
-				022B3EF929B785F2003BBF88 /* CardListView.swift */,
-				022B3EFE29B785F2003BBF88 /* CardView.swift */,
-				022B3EFC29B785F2003BBF88 /* HomeScreen.swift */,
-				022B3EFA29B785F2003BBF88 /* TransactionHeader.swift */,
-				022B3EFB29B785F2003BBF88 /* TransactionRowView.swift */,
-				022B3EFD29B785F2003BBF88 /* TransactionView.swift */,
-			);
-			path = CustomHomeViews;
-			sourceTree = "<group>";
-		};
 		022B3F0529B7885D003BBF88 /* TextFieldsViews */ = {
 			isa = PBXGroup;
 			children = (
+				02DEB0F329BB10C300F995B1 /* TextFieldNumeroView.swift */,
 			);
 			path = TextFieldsViews;
 			sourceTree = "<group>";
@@ -151,8 +141,10 @@
 		0246032529B4F51B00FBD9B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				024A06DA29BB374A00CD9708 /* OtpVerificationView.swift */,
+				027740A829B9E5D600DCA837 /* CustomMenu */,
+				027740A329B8E9B200DCA837 /* Screen2 */,
 				022B3F0529B7885D003BBF88 /* TextFieldsViews */,
-				022B3EF829B78504003BBF88 /* CustomHomeViews */,
 				022B3EF329B734BD003BBF88 /* TabBAr */,
 				0246032729B4F55800FBD9B4 /* Login.swift */,
 				023A95B629B5EFD200A2DB11 /* Verification.swift */,
@@ -240,6 +232,25 @@
 				0260C3AF29B3C4DF002B83F7 /* AuthwithOTPUITestsLaunchTests.swift */,
 			);
 			path = AuthwithOTPUITests;
+			sourceTree = "<group>";
+		};
+		027740A329B8E9B200DCA837 /* Screen2 */ = {
+			isa = PBXGroup;
+			children = (
+				027740A429B8EA3000DCA837 /* WalletView.swift */,
+			);
+			path = Screen2;
+			sourceTree = "<group>";
+		};
+		027740A829B9E5D600DCA837 /* CustomMenu */ = {
+			isa = PBXGroup;
+			children = (
+				027740AD29B9E62200DCA837 /* CustomTabView.swift */,
+				027740AB29B9E62200DCA837 /* MainView.swift */,
+				027740AC29B9E62200DCA837 /* SideMenu.swift */,
+				027740A929B9E5F800DCA837 /* Home.swift */,
+			);
+			path = CustomMenu;
 			sourceTree = "<group>";
 		};
 		4D3902A042E9476E7283A882 /* Frameworks */ = {
@@ -504,22 +515,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022B3F0029B785F2003BBF88 /* TransactionHeader.swift in Sources */,
-				022B3F0329B785F2003BBF88 /* TransactionView.swift in Sources */,
 				023A95C029B693E700A2DB11 /* HomeView.swift in Sources */,
+				024A06DB29BB374A00CD9708 /* OtpVerificationView.swift in Sources */,
+				027740AF29B9E62200DCA837 /* SideMenu.swift in Sources */,
 				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
 				022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
+				027740B029B9E62200DCA837 /* CustomTabView.swift in Sources */,
 				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
 				0260C39529B3C4DE002B83F7 /* ContentView.swift in Sources */,
 				0246032D29B543D600FBD9B4 /* Countries.swift in Sources */,
+				027740AA29B9E5F800DCA837 /* Home.swift in Sources */,
 				023A95BE29B6360E00A2DB11 /* AlertView.swift in Sources */,
+				02DEB0F429BB10C300F995B1 /* TextFieldNumeroView.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
+				027740A529B8EA3000DCA837 /* WalletView.swift in Sources */,
+				027740AE29B9E62200DCA837 /* MainView.swift in Sources */,
 				022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */,
-				022B3F0229B785F2003BBF88 /* HomeScreen.swift in Sources */,
-				022B3EFF29B785F2003BBF88 /* CardListView.swift in Sources */,
-				022B3F0129B785F2003BBF88 /* TransactionRowView.swift in Sources */,
-				022B3F0429B785F2003BBF88 /* CardView.swift in Sources */,
 				023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

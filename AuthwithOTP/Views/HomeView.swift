@@ -13,14 +13,13 @@ struct HomeView: View {
     @State var seletedTab = "house"
     var body: some View {
         ZStack(alignment: .bottom, content: {
-//            VStack {
-//
-//
-//
-//
-//            }
-            HomeScreen()
-            CustomTabBAr(selectedTab: $seletedTab)
+
+            NavigationView {
+                MainView()
+            }
+            
+            
+            //CustomTabBAr(selectedTab: $seletedTab)
             
    
             

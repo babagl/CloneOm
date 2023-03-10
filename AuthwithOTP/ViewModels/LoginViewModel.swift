@@ -66,17 +66,23 @@ class LoginViewModel: ObservableObject {
     
     func verifyCode(){
         let credential = PhoneAuthProvider.provider().credential(withVerificationID: self.CODE, verificationCode: code)
-        
+        print("i'm here")
+        print(code)
+        print("i'm here")
+        print(self.CODE)
+        print("i'm here")
         loading = true
         Auth.auth().signIn(with: credential){(result , err) in
             self.loading = false
             if let error = err {
                 self.errorMessage = error.localizedDescription
+                print(self.errorMessage)
                 withAnimation{ self.error.toggle()}
                 return
             }
             //else user logged in successfully ...
             self.status = true
+            print("user logged successfully")
         }
     }
     

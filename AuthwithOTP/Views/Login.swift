@@ -46,10 +46,15 @@ struct Login: View {
                         }
                         Spacer(minLength: 0)
                         
-                        NavigationLink(destination: Verification(loginData: loginData),isActive: $loginData.gotoVerify){
+                        NavigationLink(destination: OtpVerificationView(loginData: loginData),isActive: $loginData.gotoVerify){
                             Text("")
                                 .hidden()
                         }
+                        
+//                        NavigationLink(destination: Verification(loginData: loginData),isActive: $loginData.gotoVerify){
+//                            Text("")
+//                                .hidden()
+//                        }
                         Button(action: loginData.sendCode, label: {
                             Text("Continue")
                                 .foregroundColor(.black)

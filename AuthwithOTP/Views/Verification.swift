@@ -65,7 +65,12 @@ struct Verification: View {
                             .foregroundColor(.black)
                     }
                     .padding(.top, 6)
-                    Button(action: loginData.verifyCode){
+                    Button(action: {
+                        loginData.verifyCode()
+                        print(loginData.phNo)
+                        loginData.generateQRCode()
+                        
+                    }){
                         Text("Verifier et creer un compte ")
                             .foregroundColor(.black)
                             .padding(.vertical)

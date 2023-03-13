@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Firebase
+import CoreImage.CIFilterBuiltins
 
 class LoginViewModel: ObservableObject {
     @Published var phNo = ""
@@ -94,4 +95,22 @@ class LoginViewModel: ObservableObject {
             self.error.toggle()
         }
     }
+    
+    func generateQRCode() -> UIImage? {
+        print("qr code generator \(phNo)")
+            let data = phNo.data(using: .utf8)
+
+            let filter = CIFilter.qrCodeGenerator()
+            filter.setValue(data, forKey: "inputMessage")
+
+            if let outputImage = filter.outputImage {
+                print("si c'est vrai")
+                let context = CIContext()
+                let cgImage = context.createCGImage(outputImage, from: outputImage.extent)
+                return UIImage(cgImage: cgImage!)
+            } else {
+                return nil
+            }
+        }
+    
 }

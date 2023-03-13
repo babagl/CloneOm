@@ -9,8 +9,10 @@ import SwiftUI
 import Contacts
 
 struct WalletView: View {
+    @ObservedObject var loginData = LoginViewModel()
     var body: some View {
-        HomeWalletView()
+        
+        HomeWalletView(loginData: loginData)
     }
 }
 
@@ -21,9 +23,13 @@ struct WalletView_Previews: PreviewProvider {
 }
 
 struct HomeWalletView : View {
+    
+    @State private var qrCodeImage: UIImage?
+    @ObservedObject var loginData : LoginViewModel
+    
     @State var visible = false
     var body: some View{
-        VStack(spacing: 20){
+        VStack(spacing: 15){
 //            HStack(spacing: 15){
 //                Image("Omoney")
 //                    .resizable()
@@ -49,7 +55,7 @@ struct HomeWalletView : View {
 //            }
 //            
             HStack{
-                VStack(alignment: .leading, spacing: 15){
+                VStack(alignment: .leading, spacing: 10){
                     Button(action: {
                         withAnimation{visible.toggle()}
                     }, label: {
@@ -57,7 +63,7 @@ struct HomeWalletView : View {
                             .foregroundColor(.black)
                             
                         if visible{
-                            Text("25000 FRCFA")
+                            Text("250000 FR XOF")
                                 .foregroundColor(.black)
                                 .transition(.opacity)
                         }else{
@@ -88,6 +94,31 @@ struct HomeWalletView : View {
                         .foregroundColor(.black)
                 }
             }.padding(.top)
+            ZStack{
+                Rectangle().fill(Color("OrangeM")).frame(width: 350,height: 200)
+                    .cornerRadius(20)
+                
+                if let image = loginData.generateQRCode() {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300 ,height: 180)
+                        
+                }
+            }
+            HStack{
+                Text("Envoie Rapide")
+                    .foregroundColor(.black)
+                Spacer()
+                Button(action: {
+                    
+                }){
+                    Image(systemName: "person.badge.clock")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                }
+            }.padding(.top)
+            
             
             ScrollView(.horizontal , showsIndicators: false){
                 HStack(spacing: 15){
@@ -231,3 +262,4 @@ struct row1 : View {
     }
 }
 var name = ["Abdoulaye", "Baba","house","sall"]
+

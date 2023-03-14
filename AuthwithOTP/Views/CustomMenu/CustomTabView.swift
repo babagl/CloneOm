@@ -99,7 +99,6 @@ struct CustomTabView: View {
                     showMenu = false
                 }
             } label: {
-                
                 Image(systemName: "xmark")
                     .font(.title2)
                     .foregroundColor(.black)

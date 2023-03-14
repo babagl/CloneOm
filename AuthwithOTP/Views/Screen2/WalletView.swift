@@ -10,6 +10,7 @@ import Contacts
 
 struct WalletView: View {
     @ObservedObject var loginData = LoginViewModel()
+    
     var body: some View {
         
         HomeWalletView(loginData: loginData)
@@ -26,6 +27,7 @@ struct HomeWalletView : View {
     
     @State private var qrCodeImage: UIImage?
     @ObservedObject var loginData : LoginViewModel
+    @State var showContact = false
     
     @State var visible = false
     var body: some View{
@@ -111,13 +113,16 @@ struct HomeWalletView : View {
                     .foregroundColor(.black)
                 Spacer()
                 Button(action: {
-                    
+                    showContact.toggle()
                 }){
                     Image(systemName: "person.badge.clock")
                         .font(.title2)
                         .foregroundColor(.black)
                 }
             }.padding(.top)
+                .sheet(isPresented: $showContact){
+                    CustomContactHome()
+                }
             
             
             ScrollView(.horizontal , showsIndicators: false){

@@ -11,6 +11,7 @@ import Contacts
 struct WalletView: View {
     @ObservedObject var loginData = LoginViewModel()
     
+    
     var body: some View {
         
         HomeWalletView(loginData: loginData)
@@ -28,6 +29,7 @@ struct HomeWalletView : View {
     @State private var qrCodeImage: UIImage?
     @ObservedObject var loginData : LoginViewModel
     @State var showContact = false
+    @State private var addExpense : Bool = false
     
     @State var visible = false
     var body: some View{
@@ -95,7 +97,10 @@ struct HomeWalletView : View {
                         .font(.title2)
                         .foregroundColor(.black)
                 }
-            }.padding(.top)
+            }
+            
+            .padding(.top)
+            
             ZStack{
                 Rectangle().fill(Color("OrangeM")).frame(width: 350,height: 200)
                     .cornerRadius(20)
@@ -128,7 +133,7 @@ struct HomeWalletView : View {
             ScrollView(.horizontal , showsIndicators: false){
                 HStack(spacing: 15){
                     Button(action: {
-                        
+                        addExpense.toggle()
                     }){
                         Image(systemName: "plus.circle.fill")
                             .font(.title)
@@ -147,6 +152,14 @@ struct HomeWalletView : View {
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(20)
                     }
+                }
+                .sheet(isPresented: $addExpense){
+                    AddNewExpense()
+                    ///costumizing sheet
+                        .presentationDetents([.medium])
+                        .presentationDragIndicator(.hidden)
+                        .interactiveDismissDisabled()
+                    
                 }
                 .padding(.leading)
             }

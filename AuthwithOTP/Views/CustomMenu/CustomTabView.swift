@@ -66,7 +66,7 @@ struct CustomTabView: View {
                     .tag("Accueil")
                 
                 // Replace Your Custom Views here...
-                Text("Services")
+                ServicesView()
                     .tag("Services")
                 
                 Text("Devices")

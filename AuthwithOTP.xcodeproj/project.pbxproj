@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B53B229C868A90068D2E2 /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B129C868A90068D2E2 /* ServicesView.swift */; };
+		021B53B629C8732A0068D2E2 /* HistoriqueHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */; };
+		021B53B729C8732A0068D2E2 /* AddNewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B529C8732A0068D2E2 /* AddNewExpense.swift */; };
+		021B53BB29C8736F0068D2E2 /* CoreDataToJson.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B829C8736F0068D2E2 /* CoreDataToJson.xcdatamodeld */; };
+		021B53BC29C8736F0068D2E2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53BA29C8736F0068D2E2 /* Persistence.swift */; };
 		022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */; };
 		022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B3EF629B7478C003BBF88 /* TabCurveView.swift */; };
 		023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023A95B629B5EFD200A2DB11 /* Verification.swift */; };
@@ -58,6 +63,11 @@
 
 /* Begin PBXFileReference section */
 		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
+		021B53B129C868A90068D2E2 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriqueHomeView.swift; sourceTree = "<group>"; };
+		021B53B529C8732A0068D2E2 /* AddNewExpense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExpense.swift; sourceTree = "<group>"; };
+		021B53B929C8736F0068D2E2 /* CoreDataToJson.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataToJson.xcdatamodel; sourceTree = "<group>"; };
+		021B53BA29C8736F0068D2E2 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		022B3EF429B734D9003BBF88 /* CustomTabBAr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBAr.swift; sourceTree = "<group>"; };
 		022B3EF629B7478C003BBF88 /* TabCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurveView.swift; sourceTree = "<group>"; };
 		023A95B629B5EFD200A2DB11 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
@@ -127,6 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021B53B029C8687E0068D2E2 /* ServiceView */ = {
+			isa = PBXGroup;
+			children = (
+				021B53B129C868A90068D2E2 /* ServicesView.swift */,
+			);
+			path = ServiceView;
+			sourceTree = "<group>";
+		};
+		021B53B329C873060068D2E2 /* AchatViews */ = {
+			isa = PBXGroup;
+			children = (
+				021B53B529C8732A0068D2E2 /* AddNewExpense.swift */,
+				021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */,
+			);
+			path = AchatViews;
+			sourceTree = "<group>";
+		};
 		022B3EF329B734BD003BBF88 /* TabBAr */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +174,8 @@
 		0246032529B4F51B00FBD9B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				021B53B329C873060068D2E2 /* AchatViews */,
+				021B53B029C8687E0068D2E2 /* ServiceView */,
 				026A330229C08E6100EA77CE /* CustomContactViews */,
 				024A06DA29BB374A00CD9708 /* OtpVerificationView.swift */,
 				027740A829B9E5D600DCA837 /* CustomMenu */,
@@ -204,6 +233,8 @@
 		0260C39129B3C4DE002B83F7 /* AuthwithOTP */ = {
 			isa = PBXGroup;
 			children = (
+				021B53B829C8736F0068D2E2 /* CoreDataToJson.xcdatamodeld */,
+				021B53BA29C8736F0068D2E2 /* Persistence.swift */,
 				023A95BC29B624C900A2DB11 /* Info.plist */,
 				023A95BA29B6249E00A2DB11 /* GoogleService-Info.plist */,
 				0246032B29B543B900FBD9B4 /* Model */,
@@ -534,12 +565,16 @@
 			files = (
 				023A95C029B693E700A2DB11 /* HomeView.swift in Sources */,
 				024A06DB29BB374A00CD9708 /* OtpVerificationView.swift in Sources */,
+				021B53BB29C8736F0068D2E2 /* CoreDataToJson.xcdatamodeld in Sources */,
 				026A330629C08F0200EA77CE /* CustomContactHome.swift in Sources */,
 				027740AF29B9E62200DCA837 /* SideMenu.swift in Sources */,
+				021B53B229C868A90068D2E2 /* ServicesView.swift in Sources */,
 				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
+				021B53BC29C8736F0068D2E2 /* Persistence.swift in Sources */,
 				022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
 				026A330829C08F4D00EA77CE /* ModelContact.swift in Sources */,
+				021B53B729C8732A0068D2E2 /* AddNewExpense.swift in Sources */,
 				027740B029B9E62200DCA837 /* CustomTabView.swift in Sources */,
 				026A330429C08EA400EA77CE /* ContactRowView.swift in Sources */,
 				0246032829B4F55800FBD9B4 /* Login.swift in Sources */,
@@ -550,6 +585,7 @@
 				02DEB0F429BB10C300F995B1 /* TextFieldNumeroView.swift in Sources */,
 				0260C39329B3C4DE002B83F7 /* AuthwithOTPApp.swift in Sources */,
 				027740A529B8EA3000DCA837 /* WalletView.swift in Sources */,
+				021B53B629C8732A0068D2E2 /* HistoriqueHomeView.swift in Sources */,
 				027740AE29B9E62200DCA837 /* MainView.swift in Sources */,
 				022B3EF729B7478C003BBF88 /* TabCurveView.swift in Sources */,
 				023A95B929B610BB00A2DB11 /* CustomNumberPad.swift in Sources */,
@@ -883,6 +919,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		021B53B829C8736F0068D2E2 /* CoreDataToJson.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				021B53B929C8736F0068D2E2 /* CoreDataToJson.xcdatamodel */,
+			);
+			currentVersion = 021B53B929C8736F0068D2E2 /* CoreDataToJson.xcdatamodel */;
+			path = CoreDataToJson.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0260C38729B3C4DE002B83F7 /* Project object */;
 }

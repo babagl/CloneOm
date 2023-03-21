@@ -72,7 +72,7 @@ struct SideMenu: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(
         
-            Color(.gray)
+            Color(.black).opacity(0.8)
         )
     }
     
@@ -122,7 +122,8 @@ struct SideMenu: View {
             
                 ZStack{
                     if currentTab == title{
-                        Color(.gray)
+                        Color(.black)
+                            .opacity(0.8)
                             .clipShape(Capsule())
                             .matchedGeometryEffect(id: "TABCAPSULE", in: animation)
                     }

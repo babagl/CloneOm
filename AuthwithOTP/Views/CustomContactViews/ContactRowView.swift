@@ -17,11 +17,17 @@ struct ContactRowView: View {
                 .frame(width: 60,height: 60)
                 .clipShape(Circle())
             VStack(alignment: .leading, spacing: 8 , content: {
-                Text(contact.givenName)
-                    .fontWeight(.bold)
-                Text(contact.phoneNumber)
-                    .font(.caption)
-                    .foregroundColor(.gray)
+                HStack {
+                    Image(systemName: "person")
+                    Text(": "+contact.givenName+" "+contact.familyName)
+                        .fontWeight(.bold)
+                }
+                HStack {
+                    Image(systemName: "numbersign")
+                    Text(": "+contact.phoneNumber)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
             })
             .frame(maxWidth: .infinity, alignment: .leading)
             Button( action: {} , label: {

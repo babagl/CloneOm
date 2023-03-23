@@ -83,6 +83,7 @@ struct ServicesView: View {
                     //month data
                     GridView(fitness_Data: week_fit_data)
                         .tag(1)
+                        
                     
                     VStack{
                         Text("monthly data")
@@ -90,6 +91,7 @@ struct ServicesView: View {
                     .tag(2)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                
             
             
             
@@ -111,6 +113,7 @@ struct ServicesView_Previews: PreviewProvider {
 struct GridView : View{
     //View Propreties
     @State private var addExpense : Bool = false
+    @State private var illiflexPage : Bool = false
     var fitness_Data : [Fitness]
     var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
     var body: some View{
@@ -139,7 +142,12 @@ struct GridView : View{
                     .shadow(color: Color.black.opacity(0.2),radius: 5 , x: 0 , y: 5)
                     .onTapGesture {
                         print("holla")
-                        addExpense.toggle()
+                        if fitness.title == "Pass Illiflex\n Conso"{
+                            illiflexPage.toggle()
+                        }else{
+                            addExpense.toggle()
+                        }
+                            
                     }
                     
                     // top image
@@ -151,15 +159,23 @@ struct GridView : View{
                         .background(Color.white.opacity(0.12))
                         .clipShape(Circle())
                 }
-                .sheet(isPresented: $addExpense){
-                    AddNewExpense()
-                    ///costumizing sheet
-                        .presentationDetents([.medium])
-                        .presentationDragIndicator(.hidden)
-                        .interactiveDismissDisabled()
-                    
-                }
+                    .sheet(isPresented: $illiflexPage ){
+                        TextFieldNumeroView(montantFlex: "")
+                        ///costumizing sheet
+                            .presentationDetents([.medium])
+                            .presentationDragIndicator(.hidden)
+                            .interactiveDismissDisabled()
+                        
+                    }
+                    .sheet(isPresented: $addExpense){
+                        AddNewExpense(navTitle: "Nouvel envoie")
+                            .presentationDetents([.medium])
+                            .presentationDragIndicator(.hidden)
+                            .interactiveDismissDisabled()
+                    }
+                
             }
+            
         }
         .padding(.horizontal)
     }

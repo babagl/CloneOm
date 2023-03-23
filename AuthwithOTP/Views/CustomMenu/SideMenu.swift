@@ -22,7 +22,7 @@ struct SideMenu: View {
             
             HStack(spacing: 15){
                 
-                Image("Omoney")
+                Image("profil")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 45, height: 45)
@@ -49,11 +49,11 @@ struct SideMenu: View {
                     
                     CustomTabButton(icon: "person.fill", title: "Profil")
                     
-                    CustomTabButton(icon: "gearshape.fill", title: "Parametre")
+                    CustomTabButton(icon: "gearshape.fill", title: "Paramètres")
                     
-                    CustomTabButton(icon: "info.circle.fill", title: "About")
-                    
-                    CustomTabButton(icon: "questionmark.circle.fill", title: "Help")
+//                    CustomTabButton(icon: "info.circle.fill", title: "About")
+//
+//                    CustomTabButton(icon: "questionmark.circle.fill", title: "Help")
                     
                     Spacer()
                     

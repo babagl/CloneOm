@@ -48,7 +48,7 @@ struct HistoriqueHomeView: View {
                 }
             }
             .sheet(isPresented: $addExpense){
-                AddNewExpense()
+                AddNewExpense(navTitle: "Nouvel Envoie")
                 ///costumizing sheet
                     .presentationDetents([.medium])
                     .presentationDragIndicator(.hidden)

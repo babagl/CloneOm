@@ -30,6 +30,7 @@ struct HomeWalletView : View {
     @ObservedObject var loginData : LoginViewModel
     @State var showContact = false
     @State private var addExpense : Bool = false
+    @State var showService : Bool = false
     
     @State var visible = false
     var body: some View{
@@ -118,22 +119,29 @@ struct HomeWalletView : View {
                     .foregroundColor(.black)
                 Spacer()
                 Button(action: {
-                    showContact.toggle()
+                    
+                    addExpense.toggle()
                 }){
                     Image(systemName: "person.badge.clock")
                         .font(.title2)
                         .foregroundColor(.black)
                 }
             }.padding(.top)
-                .sheet(isPresented: $showContact){
-                    CustomContactHome()
+                .sheet(isPresented: $addExpense){
+                    AddNewExpense(navTitle: "Nouvel envoie")
+                    ///costumizing sheet
+                        .presentationDetents([.medium])
+                        .presentationDragIndicator(.hidden)
+                        .interactiveDismissDisabled()
+                    
                 }
+                .padding(.leading)
             
             
             ScrollView(.horizontal , showsIndicators: false){
                 HStack(spacing: 15){
                     Button(action: {
-                        addExpense.toggle()
+                        showContact.toggle()
                     }){
                         Image(systemName: "plus.circle.fill")
                             .font(.title)
@@ -153,15 +161,9 @@ struct HomeWalletView : View {
                         .cornerRadius(20)
                     }
                 }
-                .sheet(isPresented: $addExpense){
-                    AddNewExpense()
-                    ///costumizing sheet
-                        .presentationDetents([.medium])
-                        .presentationDragIndicator(.hidden)
-                        .interactiveDismissDisabled()
-                    
+                .sheet(isPresented: $showContact){
+                    CustomContactHome()
                 }
-                .padding(.leading)
             }
             .padding(.top,18)
             
@@ -172,13 +174,16 @@ struct HomeWalletView : View {
                     .foregroundColor(.black)
                 Spacer()
                 Button(action: {
-                    
+                    showService.toggle()
                 }){
                     Image(systemName: "list.bullet")
                         .font(.title2)
                         .foregroundColor(.black)
                 }
             }.padding(.top)
+                .sheet(isPresented: $showService){
+                    ServicesView()
+                }
             
             row1().padding(.top, 18)
             row1().padding(.top, 18)

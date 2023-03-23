@@ -12,6 +12,7 @@ struct AddNewExpense: View {
     @State private var title : String = ""
     @State private var dateOfPurchase: Date = .init()
     @State private var amoutSpent: Double = 0
+    var navTitle : String
     
     //Environment Propreties
     @Environment(\.dismiss) private var dismiss
@@ -36,7 +37,7 @@ struct AddNewExpense: View {
                     .keyboardType(.numberPad)
                 }
             }
-            .navigationTitle("Nouvel Envoi ")
+            .navigationTitle(navTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){

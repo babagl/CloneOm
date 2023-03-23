@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomTabView: View {
     @Binding var currentTab: String
     @Binding var showMenu: Bool
+    @State var showProfil : Bool = false
     
     var body: some View {
         
@@ -35,10 +36,10 @@ struct CustomTabView: View {
                 Spacer()
                 
                 Button {
-                    
+                    showProfil.toggle()
                 } label: {
                     
-                    Image("Omoney")
+                    Image("profil")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 35, height: 35)
@@ -59,6 +60,9 @@ struct CustomTabView: View {
             .padding([.horizontal,.top])
             .padding(.bottom,8)
             .padding(.top,getSafeArea().top)
+            .fullScreenCover(isPresented: $showProfil){
+                ProfileView()
+            }
             
             TabView(selection: $currentTab) {
                 
@@ -72,19 +76,11 @@ struct CustomTabView: View {
                 Text("Devices")
                     .tag("Devices")
                 
-                Text("Profil")
+                ProfileSubview()
                     .tag("Profil")
                 
-                Text("Parametre")
-                    .tag("Parametre")
-                
-                Text("About")
-                    .tag("About")
-                
-                Text("Help")
-                    .tag("Help")
-                
-                
+                ParametreUIView()
+                    .tag("Paramètres")
             }
         }
         // Disabling actions when menu is visible...

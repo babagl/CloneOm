@@ -132,6 +132,7 @@ class LoginViewModel: ObservableObject {
                     try store.enumerateContacts(with: request) { contact, _ in
                         let name = "\(contact.givenName) \(contact.familyName)"
                         for phoneNumber in contact.phoneNumbers {
+                            
                             let number = phoneNumber.value.stringValue
                             contacts.append(Contact(givenName: contact.givenName, familyName: contact.familyName, phoneNumber: number))
                         }

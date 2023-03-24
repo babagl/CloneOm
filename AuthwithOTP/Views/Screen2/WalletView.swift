@@ -30,7 +30,9 @@ struct HomeWalletView : View {
     @ObservedObject var loginData : LoginViewModel
     @State var showContact = false
     @State private var addExpense : Bool = false
+    @State private var addUpdateExpense : Bool = false
     @State var showService : Bool = false
+    
     
     @State var visible = false
     var body: some View{
@@ -128,12 +130,7 @@ struct HomeWalletView : View {
                 }
             }.padding(.top)
                 .sheet(isPresented: $addExpense){
-                    AddNewExpense(navTitle: "Nouvel envoie")
-                    ///costumizing sheet
-                        .presentationDetents([.medium])
-                        .presentationDragIndicator(.hidden)
-                        .interactiveDismissDisabled()
-                    
+                    CustomContactHome()
                 }
                 .padding(.leading)
             
@@ -147,22 +144,44 @@ struct HomeWalletView : View {
                             .font(.title)
                             .foregroundColor(Color("OrangeM"))
                     }
-                    ForEach(name,id: \.self){i in
-                        
-                        VStack (spacing: 10){
-                            Image(systemName: "person.circle")
-                                .font(.title)
-                            Text(i)
-                                .foregroundColor(.black.opacity(0.5))
+                    ForEach(loginData.contacts){i in
+                        Button(action: {
+                            addUpdateExpense.toggle()
+                        }){
+                            VStack (spacing: 10){
+                                Image(systemName: "person.circle")
+                                    .font(.title)
+                                    .foregroundColor(Color("OrangeM"))
+                                Text("\(i.givenName) \(i.familyName)")
+                                    .foregroundColor(.black.opacity(0.5))
+                                    .frame(width:90)
+                            }
+                            .frame(width : 100 ,height: 80)
+                            .padding(.vertical)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(20)
                         }
-                        .frame(width : 100 ,height: 80)
-                        .padding(.vertical)
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(20)
+                        .sheet(isPresented: $addUpdateExpense){
+                            AddUpdateExpensive(contactModel: i, navTitle: "Envoie Rapide")
+                            ///costumizing sheet
+                                .presentationDetents([.medium])
+                                .presentationDragIndicator(.hidden)
+                                .interactiveDismissDisabled()
+                            
+                                
+                        }
+                        
+                        
                     }
+                    
                 }
                 .sheet(isPresented: $showContact){
-                    CustomContactHome()
+                    
+                    AddNewExpense(navTitle: "Nouvel envoie")
+                    ///costumizing sheet
+                        .presentationDetents([.medium])
+                        .presentationDragIndicator(.hidden)
+                        .interactiveDismissDisabled()
                 }
             }
             .padding(.top,18)
@@ -192,6 +211,7 @@ struct HomeWalletView : View {
             
             
         }.padding([.horizontal, .top])
+            .onAppear{loginData.fetchContacts()}
     }
 }
 

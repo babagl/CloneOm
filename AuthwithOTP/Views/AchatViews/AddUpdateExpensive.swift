@@ -1,18 +1,20 @@
 //
-//  AddNewExpense.swift
-//  CoreDataToJson
+//  AddUpdateExpensive.swift
+//  AuthwithOTP
 //
-//  Created by Abdoulaye Aliou SALL on 17/03/2023.
+//  Created by Abdoulaye Aliou SALL on 24/03/2023.
 //
 
 import SwiftUI
 
-
-struct AddNewExpense: View {
+struct AddUpdateExpensive: View {
     //View propreties
     @State private var title : String = ""
     //Search Text
     @State var searchQuery = ""
+    //Contact Model
+    let contactModel : Contact
+    @State var phoneNumber = ""
     
     @State private var dateOfPurchase: Date = .init()
     @State private var amoutSpent: Double = 0
@@ -32,7 +34,7 @@ struct AddNewExpense: View {
             List{
                 Section("Destinataire :"){
                     
-                    TextField("Numero Téléphone", text: $searchQuery)
+                    TextField("Numero Téléphone", text: $phoneNumber)
                         .keyboardType(.numberPad)
                         .onChange(of: searchQuery, perform: {value in
                             if !value.isEmpty{
@@ -56,6 +58,9 @@ struct AddNewExpense: View {
                         
                     }
                 }
+                .onAppear(perform: {
+                    self.phoneNumber = contactModel.phoneNumber
+                })
                     
                     
                 Section("Date D'envoie :"){
@@ -109,27 +114,10 @@ struct AddNewExpense: View {
     }
 }
 
-struct AddNewExpense_Previews: PreviewProvider {
+struct AddUpdateExpensive_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView()
-    }
-}
-/// Currence Number Formatter
-let currencyFormatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    formatter.allowsFloats = false
-    formatter.numberStyle = .currency
-    return formatter
-}()
-
-
-
-extension View {
-    func underlineTextField() -> some View {
-        self
-            .padding(.vertical, 10)
-            .overlay(Rectangle().frame(height: 2).padding(.top, 35))
-            .foregroundColor(.orange)
-            .padding(10)
+        let contactModels = Contact(givenName: "baba", familyName: "galle", phoneNumber: "77853")
+        AddUpdateExpensive( contactModel: contactModels, navTitle: "Bonjour")
     }
 }

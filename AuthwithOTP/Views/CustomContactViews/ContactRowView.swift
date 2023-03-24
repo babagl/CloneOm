@@ -19,11 +19,14 @@ struct ContactRowView: View {
             VStack(alignment: .leading, spacing: 8 , content: {
                 HStack {
                     Image(systemName: "person")
+                        .foregroundColor(.black.opacity(0.8))
                     Text(": "+contact.givenName+" "+contact.familyName)
                         .fontWeight(.bold)
+                        .foregroundColor(.black.opacity(0.8))
                 }
                 HStack {
                     Image(systemName: "numbersign")
+                        .foregroundColor(.black.opacity(0.5))
                     Text(": "+contact.phoneNumber)
                         .font(.caption)
                         .foregroundColor(.gray)

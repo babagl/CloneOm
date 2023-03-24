@@ -95,7 +95,7 @@ struct AddNewExpense: View {
         do{
             let purchase = Purchase(context: context)
             purchase.id = .init()
-            purchase.title = title
+            purchase.title = searchQuery
             purchase.dateOfPurchase = dateOfPurchase
             purchase.amountSpent = amoutSpent
             

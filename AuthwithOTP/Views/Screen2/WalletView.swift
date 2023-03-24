@@ -107,13 +107,15 @@ struct HomeWalletView : View {
             ZStack{
                 Rectangle().fill(Color("OrangeM")).frame(width: 350,height: 200)
                     .cornerRadius(20)
-                
-                if let image = loginData.generateQRCode() {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300 ,height: 180)
-                        
+                VStack{
+                    if let image = loginData.generateQRCode() {
+                        Image(uiImage: image)
+                            .resizable()
+                            .interpolation(.none)
+                            .scaledToFit()
+                            .frame(width: 300 ,height: 180)
+                    }
+                    
                 }
             }
             HStack{
@@ -201,7 +203,7 @@ struct HomeWalletView : View {
                 }
             }.padding(.top)
                 .sheet(isPresented: $showService){
-                    ServicesView()
+                    HistoriqueHomeView()
                 }
             
             row1().padding(.top, 18)

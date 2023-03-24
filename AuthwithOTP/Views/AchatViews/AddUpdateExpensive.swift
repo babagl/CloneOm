@@ -100,7 +100,7 @@ struct AddUpdateExpensive: View {
         do{
             let purchase = Purchase(context: context)
             purchase.id = .init()
-            purchase.title = title
+            purchase.title = phoneNumber
             purchase.dateOfPurchase = dateOfPurchase
             purchase.amountSpent = amoutSpent
             

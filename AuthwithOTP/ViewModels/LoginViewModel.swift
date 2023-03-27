@@ -12,7 +12,7 @@ import CoreImage.CIFilterBuiltins
 import Contacts
 
 class LoginViewModel: ObservableObject {
-    @Published var contacts = [Contact]()
+    @Published var contacts : [Contact] = []
     
     @Published var phNo = ""
     @Published var code = ""
@@ -100,7 +100,7 @@ class LoginViewModel: ObservableObject {
     }
     
     func generateQRCode() -> UIImage? {
-        print("qr code generator \(phNo)")
+        print("qr code generator \(778532104)")
             let data = phNo.data(using: .utf8)
 
             let filter = CIFilter.qrCodeGenerator()
@@ -134,7 +134,9 @@ class LoginViewModel: ObservableObject {
                         for phoneNumber in contact.phoneNumbers {
                             
                             let number = phoneNumber.value.stringValue
+                            print("Voici number : "+number)
                             contacts.append(Contact(givenName: contact.givenName, familyName: contact.familyName, phoneNumber: number))
+                            
                         }
                     }
                     self.contacts = contacts

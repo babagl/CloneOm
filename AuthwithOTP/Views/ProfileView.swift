@@ -17,7 +17,7 @@ struct ProfileView: View {
                     .foregroundColor(Color("OrangeM"))
                     .padding(.top, -300)
                 VStack {
-                    Text("Abdoulaye ALiou SALL")
+                    Text("Abdoulaye Aliou SALL")
                         .font(.title)
                     .fontWeight(.bold)
                     Text("N°: 77 853 21 04")

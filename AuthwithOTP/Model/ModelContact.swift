@@ -11,6 +11,13 @@ struct Contact: Identifiable {
     var givenName: String
     var familyName: String
     var phoneNumber: String
+    init(id: UUID = UUID(), givenName: String, familyName: String, phoneNumber: String) {
+        self.id = id
+        self.givenName = givenName
+        self.familyName = familyName
+        self.phoneNumber = phoneNumber
+    }
+
 }
 struct Friend {
     var name:String

@@ -14,6 +14,7 @@ struct AddUpdateExpensive: View {
     @State var searchQuery = ""
     //Contact Model
     let contactModel : Contact
+    
     @State var phoneNumber = ""
     
     @State private var dateOfPurchase: Date = .init()
@@ -60,6 +61,7 @@ struct AddUpdateExpensive: View {
                 }
                 .onAppear(perform: {
                     self.phoneNumber = contactModel.phoneNumber
+                    
                 })
                     
                     
@@ -83,11 +85,11 @@ struct AddUpdateExpensive: View {
                         .foregroundColor(Color("OrangeM"))
                 }
                 
-                ToolbarItem(placement: .navigationBarLeading){
-                    Button("Retour"){
-                        dismiss()
-                    }
-                }
+//                ToolbarItem(placement: .navigationBarLeading){
+////                    Button("Retour"){
+////                        dismiss()
+////                    }
+//                }
             }
             .onAppear{(viewModel.fetchContacts())}
         }
@@ -118,6 +120,6 @@ struct AddUpdateExpensive_Previews: PreviewProvider {
     
     static var previews: some View {
         let contactModels = Contact(givenName: "baba", familyName: "galle", phoneNumber: "77853")
-        AddUpdateExpensive( contactModel: contactModels, navTitle: "Bonjour")
+        AddUpdateExpensive( contactModel: contactModels, navTitle: "Envoie")
     }
 }

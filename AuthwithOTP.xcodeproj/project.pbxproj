@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0215C32F29CF1342000753F2 /* DeplafonnementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0215C32E29CF1342000753F2 /* DeplafonnementView.swift */; };
+		0215C37D29D08BE0000753F2 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0215C37C29D08BE0000753F2 /* TransactionRowView.swift */; };
 		021B53B229C868A90068D2E2 /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B129C868A90068D2E2 /* ServicesView.swift */; };
 		021B53B629C8732A0068D2E2 /* HistoriqueHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */; };
 		021B53B729C8732A0068D2E2 /* AddNewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B529C8732A0068D2E2 /* AddNewExpense.swift */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
+		0215C32E29CF1342000753F2 /* DeplafonnementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeplafonnementView.swift; sourceTree = "<group>"; };
+		0215C37C29D08BE0000753F2 /* TransactionRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
 		021B53B129C868A90068D2E2 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriqueHomeView.swift; sourceTree = "<group>"; };
 		021B53B529C8732A0068D2E2 /* AddNewExpense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExpense.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		021B53B329C873060068D2E2 /* AchatViews */ = {
 			isa = PBXGroup;
 			children = (
+				0215C37C29D08BE0000753F2 /* TransactionRowView.swift */,
 				021B53B529C8732A0068D2E2 /* AddNewExpense.swift */,
 				021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */,
 				023E818229CDC72B00E6E876 /* AddUpdateExpensive.swift */,
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				02DEB0F329BB10C300F995B1 /* TextFieldNumeroView.swift */,
+				0215C32E29CF1342000753F2 /* DeplafonnementView.swift */,
 			);
 			path = TextFieldsViews;
 			sourceTree = "<group>";
@@ -580,8 +586,10 @@
 				021B53B229C868A90068D2E2 /* ServicesView.swift in Sources */,
 				023A95B729B5EFD200A2DB11 /* Verification.swift in Sources */,
 				021B53BC29C8736F0068D2E2 /* Persistence.swift in Sources */,
+				0215C32F29CF1342000753F2 /* DeplafonnementView.swift in Sources */,
 				024382A029CC4C580011539B /* ParametreUIView.swift in Sources */,
 				022B3EF529B734D9003BBF88 /* CustomTabBAr.swift in Sources */,
+				0215C37D29D08BE0000753F2 /* TransactionRowView.swift in Sources */,
 				0246032A29B53B6800FBD9B4 /* LoginViewModel.swift in Sources */,
 				026A330829C08F4D00EA77CE /* ModelContact.swift in Sources */,
 				024382A229CC6E6E0011539B /* ProfileView.swift in Sources */,

@@ -28,7 +28,7 @@ struct ServicesView: View {
                     .foregroundColor(self.index == 0 ? .white : Color("OrangeM").opacity(0.7))
                     .fontWeight(.bold)
                     .padding(.vertical, 10)
-                    .padding(.horizontal, 25)
+                    .padding(.horizontal, 17)
                     .background(Color("OrangeM").opacity(self.index == 0 ? 1 : 0))
                     .clipShape(Capsule())
                     .onTapGesture {
@@ -41,7 +41,7 @@ struct ServicesView: View {
                     .foregroundColor(self.index == 1 ? .white : Color("OrangeM").opacity(0.7))
                     .fontWeight(.bold)
                     .padding(.vertical, 10)
-                    .padding(.horizontal, 35)
+                    .padding(.horizontal, 40)
                     .background(Color("OrangeM").opacity(self.index == 1 ? 1 : 0))
                     .clipShape(Capsule())
                     .onTapGesture {
@@ -54,7 +54,7 @@ struct ServicesView: View {
                     .foregroundColor(self.index == 2 ? .white : Color("OrangeM").opacity(0.7))
                     .fontWeight(.bold)
                     .padding(.vertical, 10)
-                    .padding(.horizontal, 25)
+                    .padding(.horizontal, 17)
                     .background(Color("OrangeM").opacity(self.index == 2 ? 1 : 0))
                     .clipShape(Capsule())
                     .onTapGesture {
@@ -77,12 +77,18 @@ struct ServicesView: View {
                 TabView(selection: self.$index){
                     
                     //week data
-                    GridView(fitness_Data: fit_Data)
-                        .tag(0)
+                    ScrollView(.vertical) {
+                        Spacer()
+                        GridView(fitness_Data: fit_Data)
+                    }
+                    .tag(0)
                     
                     //month data
-                    GridView(fitness_Data: week_fit_data)
-                        .tag(1)
+                    ScrollView(.vertical, showsIndicators: false) {
+                        Spacer()
+                        GridView(fitness_Data: week_fit_data)
+                    }
+                    .tag(1)
                         
                     
                     VStack{
@@ -115,7 +121,7 @@ struct GridView : View{
     @State private var addExpense : Bool = false
     @State private var illiflexPage : Bool = false
     var fitness_Data : [Fitness]
-    var columns = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+    var columns = Array(repeating: GridItem(.adaptive(minimum: 100), spacing: 20), count: 2)
     var body: some View{
         LazyVGrid(columns: columns, spacing: 30){
             ForEach(fitness_Data){fitness in
@@ -177,7 +183,9 @@ struct GridView : View{
             }
             
         }
+        .frame(width: 370, height: 400)
         .padding(.horizontal)
+        .padding(.top,100)
     }
 }
 

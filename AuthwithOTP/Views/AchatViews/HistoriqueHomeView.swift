@@ -43,7 +43,7 @@ struct HistoriqueHomeView: View {
                         addExpense.toggle()
                     }label: {
                         Image(systemName: "plus.circle.fill")
-                            .foregroundColor(.orange)
+                            .foregroundColor(Color("OrangeM"))
                     }
                 }
             }

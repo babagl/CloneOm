@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Contacts
+import CodeScanner
 
 struct WalletView: View {
     @ObservedObject var loginData = LoginViewModel()
@@ -32,6 +33,7 @@ struct HomeWalletView : View {
     @State private var addExpense : Bool = false
     @State private var addUpdateExpense : Bool = false
     @State var showService : Bool = false
+    @State var scanView : Bool = false
     
     
     
@@ -71,7 +73,7 @@ struct HomeWalletView : View {
                         .foregroundColor(.black)
                     Spacer()
                     Button(action: {
-                        
+                        scanView.toggle()
                     }){
                         Image(systemName: "qrcode.viewfinder")
                             .font(.title2)
@@ -81,20 +83,28 @@ struct HomeWalletView : View {
                 
                 .padding(.top)
                 
-                ZStack{
-                    Rectangle().fill(Color("OrangeM")).frame(width: 350,height: 200)
-                        .cornerRadius(20)
-                    VStack{
-                        if let image = loginData.generateQRCode() {
-                            Image(uiImage: image)
-                                .resizable()
-                                .interpolation(.none)
-                                .scaledToFit()
-                                .frame(width: 300 ,height: 180)
+                Button(action:{
+                    scanView.toggle()
+                }){
+                    ZStack{
+                        Rectangle().fill(Color("OrangeM")).frame(width: 350,height: 200)
+                            .cornerRadius(20)
+                        VStack{
+                            if let image = loginData.generateQRCode() {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .interpolation(.none)
+                                    .scaledToFit()
+                                    .frame(width: 300 ,height: 180)
+                            }
+                            
                         }
-                        
                     }
                 }
+                .sheet(isPresented: $scanView){
+                    ScannerView()
+                }
+                
                 HStack{
                     Text("Envoie Rapide")
                         .foregroundColor(.black)
@@ -124,7 +134,7 @@ struct HomeWalletView : View {
                                 .foregroundColor(Color("OrangeM"))
                         }
                         
-                        ForEach(loginData.contacts.filter{$0.phoneNumber.contains("853")} , id: \.id){i in
+                        ForEach(loginData.contacts.filter{$0.phoneNumber.contains("853")}){i in
                                 NavigationLink(destination: AddUpdateExpensive(contactModel: i, navTitle: "Envoie Rapide"), label: {
                                     VStack (spacing: 10){
                                         Image(systemName: "person.circle")
@@ -171,7 +181,7 @@ struct HomeWalletView : View {
                     }
                 
                 row1().padding(.top, 18)
-                row1().padding(.top, 18)
+                
                 
             }.padding([.horizontal, .top])
                 .onAppear{loginData.fetchContacts()}
@@ -270,4 +280,6 @@ struct row1 : View {
     }
 }
 var name = ["Abdoulaye", "Baba","house","sall"]
+
+
 

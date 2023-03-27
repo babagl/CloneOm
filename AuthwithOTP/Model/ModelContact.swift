@@ -45,3 +45,33 @@ var friends = [
     Friend (name:"Tom Land", detail: "3 Miles Away", image: "animoji1"),
     
 ]
+
+struct Devices :Identifiable {
+    let id: Int
+    let nameOfdevices : String
+    let dateOfConnected : Date
+    let typeOfDevices : String
+    let Online : Bool
+}
+
+var devices = [
+    Devices(id: 1, nameOfdevices: "Apple Watch Serie 6", dateOfConnected: NSDate() as Date, typeOfDevices: "applewatch", Online: true),
+    Devices(id: 2, nameOfdevices: "Mac OS Ventura", dateOfConnected: NSDate() as Date, typeOfDevices: "laptopcomputer",Online: false),
+    Devices(id: 3, nameOfdevices: "Iphone 13 pro max IOS 16", dateOfConnected: NSDate() as Date, typeOfDevices: "iphone", Online: true)
+
+]
+
+struct Formules :Identifiable{
+    let id : Int
+    let nameFormule :String
+    let montant :String
+    let nombreDeMega: String
+    let validite : String
+}
+
+var formules = [
+    Formules(id: 1, nameFormule: "internet", montant: "1000FCFA", nombreDeMega: "3G0", validite: "3 jours"),
+    Formules(id: 2, nameFormule: "internet", montant: "2000FCFA", nombreDeMega: "4G0", validite: "1 mois"),
+    Formules(id: 3, nameFormule: "internet", montant: "1000FCFA", nombreDeMega: "3G0", validite: "3 jours"),
+    Formules(id: 4, nameFormule: "internet", montant: "1000FCFA", nombreDeMega: "3G0", validite: "3 jours")
+]

@@ -73,7 +73,7 @@ struct CustomTabView: View {
                 ServicesView()
                     .tag("Services")
                 
-                Text("Devices")
+                TransactionRowView()
                     .tag("Devices")
                 
                 ProfileSubview()
@@ -82,6 +82,7 @@ struct CustomTabView: View {
                 ParametreUIView()
                     .tag("Paramètres")
             }
+            
         }
         // Disabling actions when menu is visible...
         .disabled(showMenu)
@@ -110,6 +111,25 @@ struct CustomTabView: View {
         
             Color.white
         )
+        // swipe Gesture
+        ZStack{
+            Button(action: {
+                withAnimation(.spring()) {
+                    showMenu = false
+                }
+            }){
+                HStack {
+                    ZStack {
+                        Text("")
+                            .frame(width: 10,height: 500)
+                            .background(.white.opacity(0.0))
+                    }
+                    Spacer()
+                }
+            }
+        }
+        
+        
     }
 }
 

@@ -54,7 +54,7 @@ class LoginViewModel: ObservableObject {
 //        Auth.auth().settings?.isAppVerificationDisabledForTesting = true
         
         
-        let number = "+\(getCountryCode())\(phNo)"
+        var number = "+\(getCountryCode())\(phNo)"
         PhoneAuthProvider.provider().verifyPhoneNumber(number, uiDelegate: nil){(CODE ,err) in
             if let error = err{
                 self.errorMessage = error.localizedDescription
@@ -100,7 +100,8 @@ class LoginViewModel: ObservableObject {
     }
     
     func generateQRCode() -> UIImage? {
-        print("qr code generator \(778532104)")
+        
+        print("qr code generator \(phNo)")
             let data = phNo.data(using: .utf8)
 
             let filter = CIFilter.qrCodeGenerator()
@@ -132,9 +133,7 @@ class LoginViewModel: ObservableObject {
                     try store.enumerateContacts(with: request) { contact, _ in
                         let name = "\(contact.givenName) \(contact.familyName)"
                         for phoneNumber in contact.phoneNumbers {
-                            
                             let number = phoneNumber.value.stringValue
-                            print("Voici number : "+number)
                             contacts.append(Contact(givenName: contact.givenName, familyName: contact.familyName, phoneNumber: number))
                             
                         }

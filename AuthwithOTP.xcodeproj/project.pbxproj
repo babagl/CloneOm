@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0215C32F29CF1342000753F2 /* DeplafonnementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0215C32E29CF1342000753F2 /* DeplafonnementView.swift */; };
 		0215C37D29D08BE0000753F2 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0215C37C29D08BE0000753F2 /* TransactionRowView.swift */; };
+		0218CDC929D2DE3D003D428F /* ExpenceHomeServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218CDC829D2DE3D003D428F /* ExpenceHomeServiceView.swift */; };
 		021B53B229C868A90068D2E2 /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B129C868A90068D2E2 /* ServicesView.swift */; };
 		021B53B629C8732A0068D2E2 /* HistoriqueHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */; };
 		021B53B729C8732A0068D2E2 /* AddNewExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B53B529C8732A0068D2E2 /* AddNewExpense.swift */; };
@@ -73,6 +74,7 @@
 		0020FB9B06862ADB35F256B7 /* Pods-AuthwithOTPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthwithOTPTests.release.xcconfig"; path = "Target Support Files/Pods-AuthwithOTPTests/Pods-AuthwithOTPTests.release.xcconfig"; sourceTree = "<group>"; };
 		0215C32E29CF1342000753F2 /* DeplafonnementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeplafonnementView.swift; sourceTree = "<group>"; };
 		0215C37C29D08BE0000753F2 /* TransactionRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		0218CDC829D2DE3D003D428F /* ExpenceHomeServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenceHomeServiceView.swift; sourceTree = "<group>"; };
 		021B53B129C868A90068D2E2 /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriqueHomeView.swift; sourceTree = "<group>"; };
 		021B53B529C8732A0068D2E2 /* AddNewExpense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewExpense.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				021B53B429C8732A0068D2E2 /* HistoriqueHomeView.swift */,
 				023E818229CDC72B00E6E876 /* AddUpdateExpensive.swift */,
 				022F6D7E29D18E5100898629 /* ExpenseToScanView.swift */,
+				0218CDC829D2DE3D003D428F /* ExpenceHomeServiceView.swift */,
 			);
 			path = AchatViews;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				026A330829C08F4D00EA77CE /* ModelContact.swift in Sources */,
 				024382A229CC6E6E0011539B /* ProfileView.swift in Sources */,
 				021B53B729C8732A0068D2E2 /* AddNewExpense.swift in Sources */,
+				0218CDC929D2DE3D003D428F /* ExpenceHomeServiceView.swift in Sources */,
 				027740B029B9E62200DCA837 /* CustomTabView.swift in Sources */,
 				022F6D7D29D18C0B00898629 /* ScannerView.swift in Sources */,
 				026A330429C08EA400EA77CE /* ContactRowView.swift in Sources */,

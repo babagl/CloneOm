@@ -191,15 +191,19 @@ struct HomeWalletView : View {
 }
 
 struct row1 : View {
+    @State var showFormServices = false
+    @State var serviceName = ""
     var body: some View{
-        HStack(alignment: .top){
+        HStack(alignment: .center, spacing: 40){
+            ForEach(services){service in
             Button(action: {
-                
+                showFormServices.toggle()
+                self.serviceName = service.nameOfService
             }){
                 VStack(spacing: 8){
                     VStack{
-                        Image(systemName: "cart.badge.plus")
-                            .font(.title)
+                        Image(service.image)
+                            .resizable()
                             .foregroundColor(.black)
                             .frame(width: 30,height: 30)
                             
@@ -207,76 +211,89 @@ struct row1 : View {
                     .padding()
                     .background(Color("OrangeM"))
                     .cornerRadius(10)
-                    Text("Code Marchand")
+                    Text(service.nameOfService)
                         .frame(width: 60)
                         .font(.caption)
                         .foregroundColor(.black.opacity(0.5))
                 }
-            }
-            Spacer(minLength: 15)
-            
-            Button(action: {
-                
-            }){
-                VStack(spacing: 8){
-                    VStack{
-                        Image("rapido")
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .frame(width: 30,height: 30)
-                    }
-                    .padding()
-                    .background(Color("OrangeM"))
-                    .cornerRadius(10)
-                    Text("Rapido")
-                        .frame(width: 55)
-                        .font(.caption)
-                        .foregroundColor(.black.opacity(0.5))
+                .sheet(isPresented: $showFormServices){
+                    ExpenceHomeServiceView(title: $serviceName)
+                    ///costumizing sheet
+                        .presentationDetents([.medium])
+                        
                 }
             }
-            
-            Spacer(minLength: 15)
-            Button(action: {
-                
-            }){
-                VStack(spacing: 8){
-                    VStack{
-                        Image("Ism")
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .frame(width: 30,height: 30)
-                    }
-                    .padding()
-                    .background(Color("OrangeM"))
-                    .cornerRadius(10)
-                    Text("Ism")
-                        .frame(width: 55)
-                        .font(.caption)
-                        .foregroundColor(.black.opacity(0.5))
-                }
+            //Spacer(minLength: 40)
             }
             
-            Spacer(minLength: 15)
-            Button(action: {
-                
-            }){
-                VStack(spacing: 8){
-                    VStack{
-                        Image(systemName: "arrowshape.zigzag.forward")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(width: 30,height: 30)
-                    }
-                    .padding()
-                    .background(Color("OrangeM"))
-                    .cornerRadius(10)
-                    Text("Bicis")
-                        .frame(width: 55)
-                        .font(.caption)
-                        .foregroundColor(.black.opacity(0.5))
-                }
-            }
+            
+            
+//            Button(action: {
+//
+//            }){
+//                VStack(spacing: 8){
+//                    VStack{
+//                        Image("rapido")
+//                            .resizable()
+//                            .aspectRatio( contentMode: .fit)
+//                            .frame(width: 30,height: 30)
+//                    }
+//                    .padding()
+//                    .background(Color("OrangeM"))
+//                    .cornerRadius(10)
+//                    Text("Rapido")
+//                        .frame(width: 55)
+//                        .font(.caption)
+//                        .foregroundColor(.black.opacity(0.5))
+//                }
+//            }
+            
+//            Spacer(minLength: 15)
+//            Button(action: {
+//
+//            }){
+//                VStack(spacing: 8){
+//                    VStack{
+//                        Image("Ism")
+//                            .resizable()
+//                            .aspectRatio( contentMode: .fit)
+//                            .frame(width: 30,height: 30)
+//                    }
+//                    .padding()
+//                    .background(Color("OrangeM"))
+//                    .cornerRadius(10)
+//                    Text("Ism")
+//                        .frame(width: 55)
+//                        .font(.caption)
+//                        .foregroundColor(.black.opacity(0.5))
+//                }
+//            }
+            
+//            Spacer(minLength: 15)
+//            Button(action: {
+//
+//            }){
+//                VStack(spacing: 8){
+//                    VStack{
+//                        Image(systemName: "arrowshape.zigzag.forward")
+//                            .font(.title)
+//                            .foregroundColor(.black)
+//                            .frame(width: 30,height: 30)
+//                    }
+//                    .padding()
+//                    .background(Color("OrangeM"))
+//                    .cornerRadius(10)
+//                    Text("Bicis")
+//                        .frame(width: 55)
+//                        .font(.caption)
+//                        .foregroundColor(.black.opacity(0.5))
+//                }
+//            }
         }
+        .padding(.leading,5)
+        
+        
+        
     }
 }
 var name = ["Abdoulaye", "Baba","house","sall"]

@@ -102,7 +102,7 @@ class LoginViewModel: ObservableObject {
     func generateQRCode() -> UIImage? {
         
         print("qr code generator \(phNo)")
-            let data = phNo.data(using: .utf8)
+            let data = "778532104".data(using: .utf8)
 
             let filter = CIFilter.qrCodeGenerator()
             filter.setValue(data, forKey: "inputMessage")

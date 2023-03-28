@@ -75,3 +75,15 @@ var formules = [
     Formules(id: 3, nameFormule: "internet", montant: "1000FCFA", nombreDeMega: "3G0", validite: "3 jours"),
     Formules(id: 4, nameFormule: "internet", montant: "1000FCFA", nombreDeMega: "3G0", validite: "3 jours")
 ]
+struct Service : Identifiable {
+    let id : Int
+    let nameOfService: String
+    let image:String
+}
+
+var services = [
+    Service(id: 1, nameOfService: "Code Marchand", image: "IconePanier"),
+    Service(id: 2, nameOfService: "Carte Rapido", image: "rapido"),
+    Service(id: 3, nameOfService: "Ism\n", image: "Ism"),
+    Service(id: 4, nameOfService: "Bicis\n", image: "Bicis")
+]

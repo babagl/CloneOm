@@ -80,7 +80,7 @@ struct HomeWalletView : View {
                             .foregroundColor(.black)
                     }
                 }
-                
+                .padding(.leading)
                 .padding(.top)
                 
                 Button(action:{
@@ -161,6 +161,7 @@ struct HomeWalletView : View {
                     }
                 }
                 .padding(.top,18)
+                .padding(.leading)
                 
                 
                 
@@ -176,6 +177,7 @@ struct HomeWalletView : View {
                             .foregroundColor(.black)
                     }
                 }.padding(.top)
+                    .padding(.leading)
                     .sheet(isPresented: $showService){
                         HistoriqueHomeView()
                     }
@@ -183,18 +185,20 @@ struct HomeWalletView : View {
                 row1().padding(.top, 18)
                 
                 
-            }.padding([.horizontal, .top])
-                .onAppear{loginData.fetchContacts()}
+                
+            }.padding([.horizontal, .top] ,10)
+            .onAppear{loginData.fetchContacts()}
         
         
     }
+
 }
 
 struct row1 : View {
     @State var showFormServices = false
     @State var serviceName = ""
     var body: some View{
-        HStack(alignment: .center, spacing: 40){
+        HStack(alignment: .center, spacing: 35){
             ForEach(services){service in
             Button(action: {
                 showFormServices.toggle()
